@@ -101,6 +101,7 @@ set omnifunc=syntaxcomplete#Complete
 " Plugin code goes here.
 call plug#begin('~/.vim/plugged')
     Plug 'sainnhe/everforest'
+    Plug 'morhetz/gruvbox'
     Plug 'vim-scripts/DoxygenToolkit.vim'
     Plug 'dense-analysis/ale'
     Plug 'preservim/nerdtree'
