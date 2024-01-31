@@ -87,11 +87,6 @@ set wildmode=list:longest
 " Wildmenu will ignore files with these extensions.
 set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
 
-" Set the color scheme
-colorscheme everforest
-set background=dark
-let g:everforest_background = 'hard'
-
 " Send temp files to temp directory
 set swapfile
 set dir=/tmp
@@ -111,7 +106,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'preservim/nerdtree'
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
-    Plug 'maralla/completor.vim'
     Plug 'kien/ctrlp.vim'
     " To install ripgrep on UBUNTU
     " $ curl -LO \
@@ -119,6 +113,14 @@ call plug#begin('~/.vim/plugged')
     " $ sudo dpkg -i ripgrep_13.0.0_amd64.deb
     Plug 'jremmen/vim-ripgrep'
     Plug 'stefandtw/quickfix-reflector.vim'
+    " Requirements for auto-completion and LSP
+    Plug 'williamboman/mason.nvim'
+    Plug 'williamboman/mason-lspconfig.nvim'
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'hrsh7th/nvim-cmp'
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'L3MON4D3/LuaSnip'
+    Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
 call plug#end()
 " }}}
 
@@ -145,6 +147,9 @@ xnoremap <leader>p "_dP
 " Copy to clipboard
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
+" Move around highlighted text
+vnoremap J :m '<-2<CR>gv=gv
+vnoremap K :m '>+1<CR>gv=gv
 " }}}
 
 " VIMSCRIPT -------------------------------------------------------------- {{{
@@ -226,4 +231,16 @@ let g:ale_fixers={
 let g:ale_fix_on_save=1
 let g:ale_completion_autoimport=1
 let g:ale_c_astyle_project_options='.astylerc'
+" }}}
+
+" THEMES -------------------------------------------------------------------- {{{
+" Set the color scheme
+colorscheme everforest
+set background=dark
+let g:everforest_background = 'hard'
+" }}}
+
+" LUA -------------------------------------------------------------------- {{{
+" Requires
+lua require('lsp')
 " }}}
