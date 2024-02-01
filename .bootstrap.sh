@@ -12,6 +12,9 @@ echo "Setting Up neovim"
 bob install latest
 bob use latest
 
+echo "Installing bear"
+sudo apt-get install bear
+
 echo "Setting Up ripgrep"
 curl -LO \
     https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
