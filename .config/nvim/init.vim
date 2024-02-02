@@ -247,6 +247,6 @@ let g:everforest_background = 'hard'
 
 " LUA -------------------------------------------------------------------- {{{
 " Requires
-lua require('lsp')
-lua require('telescope')
+lua require('_lsp')
+lua require('_telescope')
 " }}}
