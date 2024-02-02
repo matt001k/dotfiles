@@ -238,8 +238,10 @@ let g:ale_c_astyle_project_options='.astylerc'
 
 " THEMES -------------------------------------------------------------------- {{{
 " Set the color scheme
-colorscheme everforest
 set background=dark
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_italic = '1'
+colorscheme gruvbox
 let g:everforest_background = 'hard'
 " }}}
 
