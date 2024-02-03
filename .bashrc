@@ -99,7 +99,21 @@ fi
 #    . /etc/bash_completion
 #fi
 
-export PATH="/root/.local/share/bob/nvim-bin:/usr/include/:$PATH"
+# Appending Path
+export PATH="$HOME/.cargo/bin:$HOME/.local/share/bob/nvim-bin:/usr/include/:$PATH"
+
+# Python Alias
+alias python=python3
+alias pip=pip3
+
+# Ahriman Environment Variables
+export AHRIMAN_ARM_TOOLCHAIN=/bin
+export AHRIMAN_GDB_SERVER=/opt/SEGGER/JLink_V770e/JLinkGDBServerCLExe
+
+# KiCAD Libraries
+export KISYSMOD=/usr/share/kicad/modules
+export KICAD_SYMBOL_DIR=/usr/share/kicad/library
+. "$HOME/.cargo/env"
 
 export KIRBY_TOOLCHAIN="/root/Development/gcc-arm-6.3.1/bin"
 export NUVOTON_TOOLS="/root/Projects/Nuvoton/nuvoton_firmware_tools/"

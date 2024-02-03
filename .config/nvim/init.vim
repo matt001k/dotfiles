@@ -124,6 +124,8 @@ call plug#begin('~/.vim/plugged')
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'L3MON4D3/LuaSnip'
     Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
+    " Dev Icons
+    Plug 'nvim-tree/nvim-web-devicons'
 call plug#end()
 " }}}
 
@@ -239,14 +241,15 @@ let g:ale_c_astyle_project_options='.astylerc'
 " THEMES -------------------------------------------------------------------- {{{
 " Set the color scheme
 set background=dark
-let g:gruvbox_contrast_dark = 'hard'
-let g:gruvbox_italic = '1'
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_italic='1'
 colorscheme gruvbox
-let g:everforest_background = 'hard'
+let g:everforest_background='hard'
 " }}}
 
 " LUA -------------------------------------------------------------------- {{{
 " Requires
 lua require('_lsp')
 lua require('_telescope')
+lua require('_devicons')
 " }}}
