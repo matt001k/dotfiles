@@ -105,12 +105,12 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'vim-scripts/DoxygenToolkit.vim'
     Plug 'dense-analysis/ale'
-    Plug 'preservim/nerdtree'
     Plug 'airblade/vim-gitgutter'
     Plug 'tpope/vim-fugitive'
     Plug 'kien/ctrlp.vim'
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.x' }
+    Plug 'nvim-telescope/telescope-file-browser.nvim'
     " To install ripgrep on UBUNTU
     " $ curl -LO \
     " https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
@@ -137,11 +137,6 @@ let mapleader = "\\"
 nnoremap <leader>g :Git<Space>
 " RipGrep
 nnoremap <leader>f :Rg<Space>
-" NERT Tree
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-o> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 " Center screen functionality
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
@@ -190,12 +185,6 @@ set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
 
 " Show the status on the second to last line.
 set laststatus=2
-" }}}
-
-" NERDTREE --------------------------------------------------------------- {{{
-" Start NERDTree. If a file is specified, move the cursor to its window.
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * NERDTree | if argc() > 0 || exists("s:std_in") | wincmd p | endif
 " }}}
 
 " GITGUTTER --------------------------------------------------------------- {{{
