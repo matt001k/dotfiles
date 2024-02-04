@@ -101,7 +101,8 @@ set omnifunc=syntaxcomplete#Complete
 " Plugin code goes here.
 call plug#begin('~/.vim/plugged')
     Plug 'sainnhe/everforest'
-    Plug 'morhetz/gruvbox'
+    Plug 'ellisonleao/gruvbox.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'vim-scripts/DoxygenToolkit.vim'
     Plug 'dense-analysis/ale'
     Plug 'preservim/nerdtree'
@@ -238,6 +239,15 @@ let g:ale_completion_autoimport=1
 let g:ale_c_astyle_project_options='.astylerc'
 " }}}
 
+" LUA -------------------------------------------------------------------- {{{
+" Requires
+lua require('_lsp')
+lua require('_telescope')
+lua require('_devicons')
+lua require('_treesitter')
+lua require('_gruvbox')
+" }}}
+
 " THEMES -------------------------------------------------------------------- {{{
 " Set the color scheme
 set background=dark
@@ -245,11 +255,4 @@ let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_italic='1'
 colorscheme gruvbox
 let g:everforest_background='hard'
-" }}}
-
-" LUA -------------------------------------------------------------------- {{{
-" Requires
-lua require('_lsp')
-lua require('_telescope')
-lua require('_devicons')
 " }}}

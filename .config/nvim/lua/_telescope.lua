@@ -1,4 +1,4 @@
-require('telescope').setup{
+require('telescope').setup {
   defaults = {
     disable_devicons = false,
     -- Default configuration for telescope goes here:
