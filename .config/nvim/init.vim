@@ -111,6 +111,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.x' }
     Plug 'nvim-telescope/telescope-file-browser.nvim'
+    Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
     " To install ripgrep on UBUNTU
     " $ curl -LO \
     " https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
@@ -235,6 +236,7 @@ lua require('_telescope')
 lua require('_devicons')
 lua require('_treesitter')
 lua require('_gruvbox')
+lua require('_toggleterm')
 " }}}
 
 " THEMES -------------------------------------------------------------------- {{{
