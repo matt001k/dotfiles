@@ -134,8 +134,6 @@ call plug#end()
 " MAPPINGS --------------------------------------------------------------- {{{
 " Mappings code goes here.
 let mapleader = "\\"
-" Git plugin
-nnoremap <leader>g :Git<Space>
 " RipGrep
 nnoremap <leader>f :Rg<Space>
 " Center screen functionality
@@ -150,8 +148,8 @@ xnoremap <leader>p "_dP
 nnoremap <leader>y "+y
 vnoremap <leader>y "+y
 " Move around highlighted text
-vnoremap J :m '<-2<CR>gv=gv
-vnoremap K :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+vnoremap J :m '>+1<CR>gv=gv
 " }}}
 
 " VIMSCRIPT -------------------------------------------------------------- {{{
@@ -191,6 +189,12 @@ set laststatus=2
 " GITGUTTER --------------------------------------------------------------- {{{
 autocmd VimEnter * GitGutterEnable
 autocmd VimEnter * GitGutterLineHighlightsEnable
+nnoremap <leader>g :Git<Space>
+nnoremap <leader>gs :Git<CR>
+nnoremap <leader>gc :Git commit<CR>
+nnoremap <leader>gca :Git commit --amend<CR>
+nnoremap <leader>gp :Git push<CR>
+nnoremap <leader>gpf :Git push --force<CR>
 " }}}
 
 " DOXYGEN ---------------------------------------------------------------- {{{
