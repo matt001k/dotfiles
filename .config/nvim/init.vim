@@ -106,6 +106,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'vim-scripts/DoxygenToolkit.vim'
     Plug 'dense-analysis/ale'
     Plug 'airblade/vim-gitgutter'
+    Plug 'akinsho/git-conflict.nvim', {'tag' : '*'}
     Plug 'tpope/vim-fugitive'
     Plug 'kien/ctrlp.vim'
     Plug 'nvim-lua/plenary.nvim'
@@ -189,12 +190,6 @@ set laststatus=2
 " GITGUTTER --------------------------------------------------------------- {{{
 autocmd VimEnter * GitGutterEnable
 autocmd VimEnter * GitGutterLineHighlightsEnable
-nnoremap <leader>g :Git<Space>
-nnoremap <leader>gs :Git<CR>
-nnoremap <leader>gc :Git commit<CR>
-nnoremap <leader>gca :Git commit --amend<CR>
-nnoremap <leader>gp :Git push<CR>
-nnoremap <leader>gpf :Git push --force<CR>
 " }}}
 
 " DOXYGEN ---------------------------------------------------------------- {{{
@@ -241,6 +236,7 @@ lua require('_devicons')
 lua require('_treesitter')
 lua require('_gruvbox')
 lua require('_toggleterm')
+lua require('_git')
 " }}}
 
 " THEMES -------------------------------------------------------------------- {{{
