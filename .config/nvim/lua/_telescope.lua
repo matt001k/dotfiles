@@ -1,12 +1,11 @@
 require('telescope').setup {
   defaults = {
     disable_devicons = false,
-    -- Default configuration for telescope goes here:
-    -- config_key = value,
-    mappings = {
-    }
   },
   pickers = {
+  },
+  find_files = {
+      hidden = true,
   },
   extensions = {
     file_browser = {
@@ -21,12 +20,11 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>fs', builtin.search_history, {})
+vim.keymap.set('n', '<leader>fc', builtin.command_history, {})
 require("telescope").load_extension "file_browser"
 
 -- open file_browser with the path of the current buffer
-vim.api.nvim_set_keymap(
-  "n",
+vim.keymap.set("n",
   "<leader>n",
-  ":Telescope file_browser path=%:p:h select_buffer=true<CR>",
-  { noremap = true }
-)
+  ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
