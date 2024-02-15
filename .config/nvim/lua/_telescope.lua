@@ -12,6 +12,12 @@ require('telescope').setup {
       theme = "ivy",
       hijack_netrw = true,
     },
+    fzf = {
+      fuzzy = true,
+      override_generic_sorter = true,
+      override_file_sorter = true,
+      case_mode = "smart_case",
+    },
   }
 }
 
@@ -23,6 +29,7 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>fs', builtin.search_history, {})
 vim.keymap.set('n', '<leader>fc', builtin.command_history, {})
 require("telescope").load_extension "file_browser"
+require('telescope').load_extension('fzf')
 
 -- open file_browser with the path of the current buffer
 vim.keymap.set("n",
