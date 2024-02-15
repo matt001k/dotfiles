@@ -131,6 +131,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'airblade/vim-gitgutter'
     Plug 'NeogitOrg/neogit'
     Plug 'akinsho/git-conflict.nvim', {'tag' : '*'}
+    Plug 'sindrets/diffview.nvim'
 call plug#end()
 " }}}
 
