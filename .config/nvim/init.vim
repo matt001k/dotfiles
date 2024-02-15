@@ -105,8 +105,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'vim-scripts/DoxygenToolkit.vim'
     Plug 'dense-analysis/ale'
-    Plug 'airblade/vim-gitgutter'
-    Plug 'akinsho/git-conflict.nvim', {'tag' : '*'}
     Plug 'tpope/vim-fugitive'
     Plug 'kien/ctrlp.vim'
     Plug 'nvim-lua/plenary.nvim'
@@ -129,6 +127,10 @@ call plug#begin('~/.vim/plugged')
     Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
     " Dev Icons
     Plug 'nvim-tree/nvim-web-devicons'
+    " Git Plugins
+    Plug 'airblade/vim-gitgutter'
+    Plug 'NeogitOrg/neogit'
+    Plug 'akinsho/git-conflict.nvim', {'tag' : '*'}
 call plug#end()
 " }}}
 

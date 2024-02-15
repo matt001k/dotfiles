@@ -1,6 +1,6 @@
 require("toggleterm").setup{
   close_on_exit = true,
-  auto_scroll = true,
+  auto_scroll = false,
   float_opts = {
     border = 'shadow',
     winblend = 3,
