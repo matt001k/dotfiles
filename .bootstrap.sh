@@ -1,5 +1,11 @@
 #!/bin/bash
 
+echo "Installing Python"
+sudo apt install python3
+sudo apt install python3-pip
+sudo pip install virtualenv
+sudo add-apt-repository ppa:deadsnakes/ppa
+
 echo "Adding Required Items For Setup, Ensure Being Run Through sudo"
 sudo apt update
 sudo apt install build-essential zlib1g-dev \
@@ -14,11 +20,6 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 echo "Setting Up rustup"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-echo "Installing Python"
-sudo apt install python
-sudo pip install virtualenv
-sudo add-apt-repository ppa:deadsnakes/ppa
 
 echo "Installing bob (NeoVIM Updater)"
 cargo install bob-nvim
