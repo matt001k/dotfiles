@@ -3,7 +3,7 @@
 echo "Installing Python"
 sudo apt install python3
 sudo apt install python3-pip
-sudo pip install virtualenv
+sudo apt install python3-venv
 sudo add-apt-repository ppa:deadsnakes/ppa
 
 echo "Adding Required Items For Setup, Ensure Being Run Through sudo"
