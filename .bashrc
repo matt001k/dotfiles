@@ -101,6 +101,7 @@ fi
 
 # Appending Path
 export PATH="$HOME/.cargo/bin:$HOME/.local/share/bob/nvim-bin:/usr/include/:$PATH"
+export PATH="$HOME/tools/:$PATH"
 
 # Python Alias
 alias python=python3

@@ -28,8 +28,8 @@ echo "Installing bob (NeoVIM Updater)"
 cargo install bob-nvim
 
 echo "Setting Up neovim"
-bob install latest
-bob use latest
+$HOME/.cargo/bin/bob install latest
+$HOME/.cargo/bin/bob use latest
 
 echo "Installing bear"
 sudo apt-get install bear
@@ -58,3 +58,9 @@ sudo apt-get install git -y
 
 echo "Installing FZF"
 sudo apt install fzf
+
+echo "Installing Build Tools"
+sudo apt-get install cmake
+sudo apt-get install device-tree-compiler
+sudo apt-get install gperf
+sudo apt-get install ninja-build
