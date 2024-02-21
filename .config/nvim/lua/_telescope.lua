@@ -21,9 +21,25 @@ require('telescope').setup {
   }
 }
 
+local function git_search()
+  require('telescope.builtin').git_files({
+    use_git_root = true,
+    recurse_submodules = true,
+  })
+end
+
+local function find()
+  require('telescope.builtin').find_files({
+    hidden = true,
+  })
+end
+
 local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>ff', find, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fr', builtin.resume, {})
+vim.keymap.set('n', '<leader>fg*', builtin.grep_string, {})
+vim.keymap.set('n', '<leader>fgg', git_search, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>fs', builtin.search_history, {})
