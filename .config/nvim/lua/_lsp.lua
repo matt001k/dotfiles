@@ -67,3 +67,7 @@ cmp.setup({
         end, { "i", "s" }),
     }),
 })
+
+--- Keymap
+vim.keymap.set("n", "gs", "<cmd>split | lua vim.lsp.buf.definition()<CR>", {})
+vim.keymap.set("n", "gv", "<cmd>vsplit | lua vim.lsp.buf.definition()<CR>", {})
