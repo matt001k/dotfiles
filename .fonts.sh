@@ -16,7 +16,7 @@ value()
         echo "creating fonts folder: ${HOME}/.fonts"
         mkdir -p  "$HOME/.fonts"
         echo "unzip the $font_name.zip"
-        unzip "$font_name.zip" -d "$HOME/.fonts/$font_name/"
+        unzip "$font_name.zip" -d "/usr/local/share/fonts/$font_name/"
         fc-cache -fv
         echo "done!"
 
@@ -26,7 +26,7 @@ value()
         echo "creating fonts folder: ${HOME}/.fonts"
         mkdir -p  "$HOME/.fonts"
         echo "unzip the $font_name.zip"
-        unzip "$font_name.zip" -d "$HOME/.fonts/$font_name/"
+        unzip "$font_name.zip" -d "/usr/local/share/fonts/$font_name/"
         fc-cache -fv
         echo "done!"
 
