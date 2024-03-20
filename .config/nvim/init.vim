@@ -147,6 +147,9 @@ nnoremap <C-u> <C-u>zz
 nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap <Leader>b :CtrlPBuffer<CR>
+" No copy on delete
+nnoremap <leader>d "_d
+xnoremap <leader>d "_d
 " No copy on pasted
 xnoremap <leader>p "_dP
 " Copy to clipboard
