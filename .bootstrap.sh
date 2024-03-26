@@ -64,3 +64,8 @@ sudo apt-get install cmake
 sudo apt-get install device-tree-compiler
 sudo apt-get install gperf
 sudo apt-get install ninja-build
+
+echo "Setting Up zsh"
+sudo apt-get install zsh
+chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"

@@ -158,6 +158,8 @@ vnoremap <leader>y "+y
 " Move around highlighted text
 vnoremap K :m '<-2<CR>gv=gv
 vnoremap J :m '>+1<CR>gv=gv
+" Set home directory
+nnoremap <leader>cd :cd %:h<CR>
 " }}}
 
 " VIMSCRIPT -------------------------------------------------------------- {{{
