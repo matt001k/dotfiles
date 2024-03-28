@@ -70,7 +70,14 @@ ZSH_CUSTOM=$HOME/.config/oh-my-zsh
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git z zsh-autosuggestions)
+
+# Plugin Customization
+
+# Zsh Autosuggestions
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8,bold"
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+bindkey '^ ' autosuggest-accept
 
 source $ZSH/oh-my-zsh.sh
 
