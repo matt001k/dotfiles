@@ -24,10 +24,10 @@ function box_name {
   echo "${box:gs/%/%%}"
 }
 
-PROMPT="╭─%{$FG[013]%}%n%{$reset_color%} %{$FG[007]%}at%{$reset_color%} %{$FG[029]%}$(box_name)%{$reset_color%} %{$FG[007]%}in%{$reset_color%} %{$terminfo[bold]$FG[015]%}%~%{$reset_color%}\$(git_prompt_info)\$(ruby_prompt_info) %D - %*
-╰─\$(virtualenv_info)\$(prompt_char) "
+PROMPT="%{$FG[223]%}╭─%{$reset_color%} %{$FG[138]%}%n%{$reset_color%} %{$FG[223]%}at%{$reset_color%} %{$FG[029]%}$(box_name)%{$reset_color%} %{$FG[223]%}in%{$reset_color%} %{$terminfo[bold]$FG[015]%}%~%{$reset_color%}\$(git_prompt_info)\$(ruby_prompt_info) %{$reset_color%}%{$FG[223]%}%D - %*
+%{$FG[223]%}╰─\$(virtualenv_info)\$(prompt_char) "
 
-ZSH_THEME_GIT_PROMPT_PREFIX=" %{$FG[007]%}on%{$reset_color%} %{$FG[011]%}%{$reset_color%} %{$FG[015]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX=" %{$FG[223]%}on%{$reset_color%} %{$FG[011]%}%{$reset_color%} %{$FG[223]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$FG[208]%}✘"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %{$FG[010]%}"
