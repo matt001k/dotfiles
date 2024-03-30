@@ -75,7 +75,7 @@ plugins=(git z zsh-autosuggestions)
 # Plugin Customization
 
 # Zsh Autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8,bold"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=223,bold"
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 bindkey '^ ' autosuggest-accept
 
