@@ -69,3 +69,6 @@ echo "Setting Up zsh"
 sudo apt-get install zsh
 chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+echo "Setting Up tmux"
+sudo apt-get install tmux
