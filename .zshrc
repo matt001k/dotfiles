@@ -92,8 +92,8 @@ alias python=python3
 alias pip=pip3
 
 # Ahriman Environment Variables
-export AHRIMAN_ARM_TOOLCHAIN=/bin
-export AHRIMAN_GDB_SERVER=/opt/SEGGER/JLink_V770e/JLinkGDBServerCLExe
+export AHRIMAN_ARM_TOOLCHAIN=/bin/arm-gnu-toolchain-13.2.Rel1/bin
+export AHRIMAN_GDB_SERVER=/opt/SEGGER/JLink/JLinkGDBServerCLExe
 
 # KiCAD Libraries
 export KISYSMOD=/usr/share/kicad/modules

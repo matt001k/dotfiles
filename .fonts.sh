@@ -13,28 +13,17 @@ value()
     if [ "$(command -v curl)" ]; then
         echo "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
         curl -OL "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
-        echo "creating fonts folder: ${HOME}/.fonts"
-        mkdir -p  "$HOME/.fonts"
-        echo "unzip the $font_name.zip"
-        unzip "$font_name.zip" -d "/usr/local/share/fonts/$font_name/"
-        fc-cache -fv
-        echo "done!"
 
     elif [ "$(command -v wget)" ]; then
         echo "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
         wget "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/$font_name.zip"
-        echo "creating fonts folder: ${HOME}/.fonts"
-        mkdir -p  "$HOME/.fonts"
-        echo "unzip the $font_name.zip"
-        unzip "$font_name.zip" -d "/usr/local/share/fonts/$font_name/"
-        fc-cache -fv
-        echo "done!"
-
-    else
-
-        echo "We cannot find the curl and wget command. First, install the curl and wget command, one of them."
-
     fi
+    echo "done!"
+    echo "creating fonts folder: $HOME/.local/share/fonts"
+    mkdir -p  "$HOME/.local/share/fonts"
+    echo "unzip the $font_name.zip"
+    unzip "$font_name.zip" -d"$HOME/.local/share/fonts"
+    fc-cache -fv
 }
 arg=$1
 if [ -n "$arg" ]; then
