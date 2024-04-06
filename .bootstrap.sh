@@ -44,6 +44,8 @@ echo "Setting Up Docker"
 sudo install -m 0755 -d /etc/apt/keyrings
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
 sudo chmod a+r /etc/apt/keyrings/docker.asc
+sudo groupadd docker
+sudo usermod -aG docker ${USER}
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
   $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
@@ -67,7 +69,7 @@ sudo apt-get install ninja-build
 
 echo "Setting Up zsh"
 sudo apt-get install zsh
-chsh -s $(which zsh)
+chsh -s $(which zsh) $USER
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "Setting Up tmux"
