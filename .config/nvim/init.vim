@@ -133,6 +133,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'NeogitOrg/neogit'
     Plug 'akinsho/git-conflict.nvim', {'tag' : '*'}
     Plug 'sindrets/diffview.nvim'
+    Plug 'ThePrimeagen/harpoon', {'branch': 'harpoon2'}
 call plug#end()
 " }}}
 
