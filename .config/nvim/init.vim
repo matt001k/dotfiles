@@ -134,6 +134,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'akinsho/git-conflict.nvim', {'tag' : '*'}
     Plug 'sindrets/diffview.nvim'
     Plug 'ThePrimeagen/harpoon', {'branch': 'harpoon2'}
+    Plug 'nvim-lualine/lualine.nvim'
 call plug#end()
 " }}}
 
@@ -247,6 +248,8 @@ lua require('_treesitter')
 lua require('_gruvbox')
 lua require('_toggleterm')
 lua require('_git')
+lua require('_lualine')
+lua require('_harpoon')
 " }}}
 
 " THEMES -------------------------------------------------------------------- {{{
