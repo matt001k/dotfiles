@@ -100,7 +100,6 @@ set omnifunc=syntaxcomplete#Complete
 " PLUGINS ---------------------------------------------------------------- {{{
 " Plugin code goes here.
 call plug#begin('~/.vim/plugged')
-    Plug 'sainnhe/everforest'
     Plug 'ellisonleao/gruvbox.nvim'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'vim-scripts/DoxygenToolkit.vim'
@@ -133,8 +132,11 @@ call plug#begin('~/.vim/plugged')
     Plug 'NeogitOrg/neogit'
     Plug 'akinsho/git-conflict.nvim', {'tag' : '*'}
     Plug 'sindrets/diffview.nvim'
+    " Harpoon
     Plug 'ThePrimeagen/harpoon', {'branch': 'harpoon2'}
+    " UI Improvements
     Plug 'nvim-lualine/lualine.nvim'
+    Plug 'goolord/alpha-nvim'
 call plug#end()
 " }}}
 
@@ -250,6 +252,7 @@ lua require('_toggleterm')
 lua require('_git')
 lua require('_lualine')
 lua require('_harpoon')
+lua require('_alpha')
 " }}}
 
 " THEMES -------------------------------------------------------------------- {{{
@@ -258,5 +261,4 @@ set background=dark
 let g:gruvbox_contrast_dark='hard'
 let g:gruvbox_italic='1'
 colorscheme gruvbox
-let g:everforest_background='hard'
 " }}}
