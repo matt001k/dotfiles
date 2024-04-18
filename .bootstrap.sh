@@ -23,6 +23,7 @@ sudo apt install gnome-tweaks
 
 echo "Setting Up rustup"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source $HOME/.cargo/env
 
 echo "Installing bob (NeoVIM Updater)"
 cargo install bob-nvim
