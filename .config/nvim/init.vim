@@ -111,11 +111,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-telescope/telescope-file-browser.nvim'
     Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
     Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
-    " To install ripgrep on UBUNTU
-    " $ curl -LO \
-    " https://github.com/BurntSushi/ripgrep/releases/download/13.0.0/ripgrep_13.0.0_amd64.deb
-    " $ sudo dpkg -i ripgrep_13.0.0_amd64.deb
-    Plug 'jremmen/vim-ripgrep'
     Plug 'stefandtw/quickfix-reflector.vim'
     " Requirements for auto-completion and LSP
     Plug 'williamboman/mason.nvim'
@@ -129,7 +124,6 @@ call plug#begin('~/.vim/plugged')
     Plug 'nvim-tree/nvim-web-devicons'
     " Git Plugins
     Plug 'airblade/vim-gitgutter'
-    Plug 'NeogitOrg/neogit'
     Plug 'akinsho/git-conflict.nvim', {'tag' : '*'}
     Plug 'sindrets/diffview.nvim'
     " Harpoon
@@ -144,7 +138,6 @@ call plug#end()
 " Mappings code goes here.
 let mapleader = "\\"
 " RipGrep
-nnoremap <leader>f :Rg<Space>
 " Center screen functionality
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
@@ -180,24 +173,6 @@ augroup numbertoggle
   autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu                  | set nornu | endif
 augroup END
 " More Vimscripts code goes here.
-" }}}
-
-" STATUS LINE ------------------------------------------------------------ {{{
-" Status bar code goes here.
-" Clear status line when vimrc is reloaded.
-set statusline=
-
-" Status line left side.
-set statusline+=\ %F\ %M\ %Y\ %R
-
-" Use a divider to separate the left side from the right side.
-set statusline+=%=
-
-" Status line right side.
-set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
-
-" Show the status on the second to last line.
-set laststatus=2
 " }}}
 
 " GITGUTTER --------------------------------------------------------------- {{{
