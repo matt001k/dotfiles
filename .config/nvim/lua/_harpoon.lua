@@ -20,6 +20,7 @@ local function toggle_telescope(harpoon_files)
     }):find()
 end
 
+-- Keymap
 harpoon:extend({
   UI_CREATE = function(cx)
     vim.keymap.set("n", "<C-v>", function()

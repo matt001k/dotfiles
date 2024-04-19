@@ -120,6 +120,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'L3MON4D3/LuaSnip'
     Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
+    Plug 'rmagatti/goto-preview'
     " Dev Icons
     Plug 'nvim-tree/nvim-web-devicons'
     " Git Plugins

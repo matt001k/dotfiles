@@ -1,19 +1,3 @@
--- Keymap
-vim.keymap.set('n', '<leader>g', ':Git<Space>')
-vim.keymap.set('n', '<leader>gs', ':Git<CR>')
-vim.keymap.set('n', '<leader>gc', ':Git commit<CR>')
-vim.keymap.set('n', '<leader>gca', ':Git commit --amend<CR>')
-vim.keymap.set('n', '<leader>gp', ':Git push<CR>')
-vim.keymap.set('n', '<leader>gpf', ':Git push --force<CR>')
-vim.keymap.set('n', '<leader>ga', ':Git add<space>')
-vim.keymap.set('n', '<leader>gaa', ':Git add -A<CR>')
-vim.keymap.set('n', '<leader>gr', ':Git rebase<space>')
-vim.keymap.set('n', '<leader>grl', ':Git reflog<CR>')
-vim.keymap.set('n', '<leader>gd', ':DiffviewOpen<CR>')
-vim.keymap.set('n', '<leader>gdh', ':DiffviewFileHistory<CR>')
-vim.keymap.set('n', '<leader>gdc', ':DiffviewClose<CR>')
-vim.keymap.set('n', '<leader>gd<space>', ':DiffviewOpen<space>')
-
 -- git-conflict setup
 require("git-conflict").setup {
   default_mappings = {
@@ -251,3 +235,19 @@ require("diffview").setup({
     },
   },
 })
+
+-- Keymap
+vim.keymap.set('n', '<leader>g', ':Git<Space>')
+vim.keymap.set('n', '<leader>gs', ':Git<CR>')
+vim.keymap.set('n', '<leader>gc', ':Git commit<CR>')
+vim.keymap.set('n', '<leader>gca', ':Git commit --amend<CR>')
+vim.keymap.set('n', '<leader>gp', ':Git push<CR>')
+vim.keymap.set('n', '<leader>gpf', ':Git push --force<CR>')
+vim.keymap.set('n', '<leader>ga', ':Git add<space>')
+vim.keymap.set('n', '<leader>gaa', ':Git add -A<CR>')
+vim.keymap.set('n', '<leader>gr', ':Git rebase<space>')
+vim.keymap.set('n', '<leader>grl', ':Git reflog<CR>')
+vim.keymap.set('n', '<leader>gd', ':DiffviewOpen<CR>')
+vim.keymap.set('n', '<leader>gdh', ':DiffviewFileHistory<CR>')
+vim.keymap.set('n', '<leader>gdc', ':DiffviewClose<CR>')
+vim.keymap.set('n', '<leader>gd<space>', ':DiffviewOpen<space>')
