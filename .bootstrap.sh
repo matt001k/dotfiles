@@ -75,3 +75,5 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 echo "Setting Up tmux"
 sudo apt-get install tmux
+
+sudo apt-get install xclip
