@@ -37,8 +37,14 @@ harpoon:extend({
   end,
 })
 
+local function remove_all(harpoon_files)
+    for _, item in ipairs(harpoon_files.items) do
+        harpoon:list():remove(item)
+    end
+end
+
 vim.keymap.set("n", "<leader>a", function() harpoon:list():add() end)
-vim.keymap.set("n", "<leader>d", function() harpoon:list():remove() end)
+vim.keymap.set("n", "<leader>d", function() remove_all(harpoon:list()) end)
 vim.keymap.set("n", "<leader>e", function() toggle_telescope(harpoon:list()) end,
     { desc = "Open harpoon window" })
 vim.keymap.set("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
