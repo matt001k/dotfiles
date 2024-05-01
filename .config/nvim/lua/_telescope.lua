@@ -22,9 +22,18 @@ require('telescope').setup {
 }
 
 -- Functions
+function Telescope_Filetree()
+    local path = vim.fn.expand('%:p:h')
+    require('telescope').extensions.file_browser.file_browser({
+        path=path,
+        select_buffer=true,
+    })
+end
+
 local function git_search()
   require('telescope.builtin').git_files({
     use_git_root = true,
+    hidden = true,
     recurse_submodules = true,
   })
 end
@@ -50,6 +59,4 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 vim.keymap.set('n', '<leader>fs', builtin.search_history, {})
 vim.keymap.set('n', '<leader>fc', builtin.command_history, {})
 -- open file_browser with the path of the current buffer
-vim.keymap.set("n",
-  "<leader>n",
-  ":Telescope file_browser path=%:p:h select_buffer=true<CR>")
+vim.keymap.set("n", "<leader>n", Telescope_Filetree, {})
