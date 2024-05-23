@@ -18,8 +18,9 @@ echo "Installing Plugin Manager"
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-echo "Setting Up Fonts"
+echo "Setting Up Fonts And Tweaks"
 sudo apt install gnome-tweaks
+sudo apt install gnome-shell-extension-prefs
 
 echo "Setting Up rustup"
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -76,4 +77,13 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 echo "Setting Up tmux"
 sudo apt-get install tmux
 
+echo "Setting Up XClip"
 sudo apt-get install xclip
+
+echo "Setting Up Kitty"
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+ln -sf ~/.local/kitty.app/bin/kitty ~/.local/kitty.app/bin/kitten ~/.local/bin/
+cp ~/.local/kitty.app/share/applications/kitty.desktop ~/.local/share/applications/
+cp ~/.local/kitty.app/share/applications/kitty-open.desktop ~/.local/share/applications/
+sed -i "s|Icon=kitty|Icon=/home/$USER/.local/kitty.app/share/icons/hicolor/256x256/apps/kitty.png|g" ~/.local/share/applications/kitty*.desktop
+sed -i "s|Exec=kitty|Exec=/home/$USER/.local/kitty.app/bin/kitty|g" ~/.local/share/applications/kitty*.desktop
