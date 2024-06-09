@@ -20,7 +20,7 @@ dashboard.section.buttons.val = {
     dashboard.button( "r", "  > Recent"   ,  ":Telescope oldfiles<CR>"),
     dashboard.button( "n", "  > File Tree" , ":lua Telescope_Filetree()<CR>"),
     dashboard.button( "s", "  > Settings" ,  ":e $MYVIMRC | pwd<CR>"),
-    dashboard.button( "t", "  > Terminal" ,  ":ToggleTerm size=20 dir=%:p:h direction=float<CR>"),
+    dashboard.button( "t", "  > Terminal" ,  ":ToggleTerm size=20 dir=%:p:h direction=horizontal<CR>"),
     dashboard.button( "q", "  > Quit NVIM",  ":qa!<CR>"),
 }
 
